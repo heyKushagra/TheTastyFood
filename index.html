@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheTastyFood — Experience the Finest Indian Cuisine</title>
+  <meta name="description" content="TheTastyFood brings you an unforgettable journey through the rich flavors of India. From aromatic biryanis to sizzling tandoori, experience premium Indian dining.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">The<span>Tasty</span>Food</div>
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-glow"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Ambient Glow -->
+  <div class="ambient-glow ambient-glow--orange"></div>
+  <div class="ambient-glow ambient-glow--red"></div>
+
+  <!-- Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        The<span class="logo-accent">Tasty</span>Food
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="reservation.html" class="nav-cta">Reserve Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background-image: url('assets/images/hero_1.png')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero_2.png')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero_3.png')"></div>
+      <div class="hero-slide" style="background-image: url('assets/images/hero_4.png')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-label reveal">— Indian Fine Dining —</span>
+      <h1 class="hero-title reveal reveal-delay-1">
+        Experience the <span>Finest</span><br>Indian Cuisine
+      </h1>
+      <p class="hero-subtitle reveal reveal-delay-2">
+        A symphony of spices, tradition, and artistry — crafted to elevate your senses
+      </p>
+      <div class="hero-buttons reveal reveal-delay-3">
+        <a href="reservation.html" class="btn btn-primary">
+          Reserve a Table
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="menu.html" class="btn btn-outline">
+          Explore Menu
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slider Indicators -->
+    <div class="hero-indicators" id="heroIndicators">
+      <button class="hero-indicator active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-indicator" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-indicator" data-slide="2" aria-label="Slide 3"></button>
+      <button class="hero-indicator" data-slide="3" aria-label="Slide 4"></button>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-indicator-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED DISHES ========== -->
+  <section class="section featured" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Our Specialties</span>
+        <h2 class="section-title reveal reveal-delay-1">Featured <span>Dishes</span></h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">
+          Hand-picked favorites from our kitchen, crafted with the finest spices and time-honored recipes passed down through generations.
+        </p>
+      </div>
+      <div class="featured-grid">
+        <div class="featured-card reveal reveal-delay-1">
+          <div class="featured-img-wrap">
+            <img src="assets/images/dish_1.png" alt="Crispy Samosa" loading="lazy">
+            <div class="featured-badge">Popular</div>
+          </div>
+          <div class="featured-info">
+            <h3>Royal Samosa</h3>
+            <p>Crispy golden pastry filled with spiced potatoes and peas</p>
+            <span class="featured-price">₹149</span>
+          </div>
+        </div>
+        <div class="featured-card reveal reveal-delay-2">
+          <div class="featured-img-wrap">
+            <img src="assets/images/dish_2.png" alt="Paneer Tikka" loading="lazy">
+            <div class="featured-badge">Chef's Pick</div>
+          </div>
+          <div class="featured-info">
+            <h3>Paneer Tikka Masala</h3>
+            <p>Cottage cheese in rich tomato gravy with aromatic spices</p>
+            <span class="featured-price">₹329</span>
+          </div>
+        </div>
+        <div class="featured-card reveal reveal-delay-3">
+          <div class="featured-img-wrap">
+            <img src="assets/images/dish_3.png" alt="Chicken Biryani" loading="lazy">
+            <div class="featured-badge">Bestseller</div>
+          </div>
+          <div class="featured-info">
+            <h3>Hyderabadi Biryani</h3>
+            <p>Fragrant basmati rice layered with tender chicken and saffron</p>
+            <span class="featured-price">₹349</span>
+          </div>
+        </div>
+        <div class="featured-card reveal reveal-delay-4">
+          <div class="featured-img-wrap">
+            <img src="assets/images/dish_4.png" alt="Dal Makhani" loading="lazy">
+            <div class="featured-badge">Must Try</div>
+          </div>
+          <div class="featured-info">
+            <h3>Dal Makhani</h3>
+            <p>Slow-cooked black lentils in creamy buttery gravy</p>
+            <span class="featured-price">₹249</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section class="section why-us" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Why TheTastyFood</span>
+        <h2 class="section-title reveal reveal-delay-1">Why Choose <span>Us</span></h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card glass-card reveal reveal-delay-1">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          </div>
+          <h3>Authentic Recipes</h3>
+          <p>Time-honored family recipes passed down through five generations of master chefs</p>
+        </div>
+        <div class="why-card glass-card reveal reveal-delay-2">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Fresh Ingredients</h3>
+          <p>Locally sourced, farm-fresh produce and hand-ground spices prepared daily</p>
+        </div>
+        <div class="why-card glass-card reveal reveal-delay-3">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Expert Chefs</h3>
+          <p>Award-winning culinary team with decades of experience in Indian cuisine</p>
+        </div>
+        <div class="why-card glass-card reveal reveal-delay-4">
+          <div class="why-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3>Warm Ambiance</h3>
+          <p>An intimate dining atmosphere designed to make every meal a memorable experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SIGNATURE DISHES ========== -->
+  <section class="section signature parallax-section">
+    <div class="parallax-bg" style="background-image: url('assets/images/hero_1.png')"></div>
+    <div class="parallax-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <div class="section-header">
+        <span class="section-label reveal">Signature Collection</span>
+        <h2 class="section-title reveal reveal-delay-1">Our <span>Signature</span> Dishes</h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">
+          Exquisite creations that define our culinary identity — each dish tells a story of passion and flavor
+        </p>
+      </div>
+      <div class="signature-grid">
+        <div class="signature-card reveal reveal-delay-1">
+          <div class="signature-img">
+            <img src="assets/images/dish_5.png" alt="Seekh Kebab" loading="lazy">
+          </div>
+          <div class="signature-content">
+            <span class="signature-number">01</span>
+            <h3>Smoky Seekh Kebabs</h3>
+            <p>Hand-minced lamb seasoned with aromatic spices, charcoal-grilled to perfection with a smoky finish that lingers on your palate.</p>
+            <span class="signature-price">₹399</span>
+          </div>
+        </div>
+        <div class="signature-card reverse reveal reveal-delay-2">
+          <div class="signature-img">
+            <img src="assets/images/hero_4.png" alt="Butter Chicken" loading="lazy">
+          </div>
+          <div class="signature-content">
+            <span class="signature-number">02</span>
+            <h3>Royal Butter Chicken</h3>
+            <p>Tender chicken pieces simmered in a velvety tomato-cashew gravy, finished with a drizzle of cream and a whisper of fenugreek.</p>
+            <span class="signature-price">₹449</span>
+          </div>
+        </div>
+        <div class="signature-card reveal reveal-delay-3">
+          <div class="signature-img">
+            <img src="assets/images/dish_6.png" alt="Gulab Jamun" loading="lazy">
+          </div>
+          <div class="signature-content">
+            <span class="signature-number">03</span>
+            <h3>Saffron Gulab Jamun</h3>
+            <p>Golden milk dumplings soaked in rose-infused sugar syrup, crowned with slivered pistachios and delicate saffron strands.</p>
+            <span class="signature-price">₹199</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY PREVIEW ========== -->
+  <section class="section gallery-preview" id="gallery-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal">Visual Journey</span>
+        <h2 class="section-title reveal reveal-delay-1">A Glimpse of <span>Our World</span></h2>
+        <div class="section-divider reveal reveal-delay-2"></div>
+      </div>
+      <div class="gallery-preview-grid">
+        <div class="gallery-preview-item gallery-preview-item--large reveal reveal-delay-1">
+          <img src="assets/images/gallery_1.png" alt="Spice Collection" loading="lazy">
+          <div class="gallery-preview-overlay">
+            <span>Artisan Spices</span>
+          </div>
+        </div>
+        <div class="gallery-preview-item reveal reveal-delay-2">
+          <img src="assets/images/gallery_2.png" alt="Restaurant Interior" loading="lazy">
+          <div class="gallery-preview-overlay">
+            <span>Our Ambiance</span>
+          </div>
+        </div>
+        <div class="gallery-preview-item reveal reveal-delay-3">
+          <img src="assets/images/gallery_3.png" alt="Street Food" loading="lazy">
+          <div class="gallery-preview-overlay">
+            <span>Street Flavors</span>
+          </div>
+        </div>
+        <div class="gallery-preview-item reveal reveal-delay-4">
+          <img src="assets/images/gallery_4.png" alt="Masala Chai" loading="lazy">
+          <div class="gallery-preview-overlay">
+            <span>Masala Chai</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-preview-cta reveal">
+        <a href="gallery.html" class="btn btn-outline">
+          View Full Gallery
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="cta-banner parallax-section">
+    <div class="parallax-bg" style="background-image: url('assets/images/hero_2.png')"></div>
+    <div class="parallax-overlay" style="background: linear-gradient(180deg, rgba(10,10,10,0.65) 0%, rgba(10,10,10,0.8) 100%);"></div>
+    <div class="container cta-banner-content">
+      <span class="section-label reveal">Reserve Your Experience</span>
+      <h2 class="cta-banner-title reveal reveal-delay-1">Ready for an <span>Unforgettable</span> Dining Experience?</h2>
+      <p class="cta-banner-desc reveal reveal-delay-2">
+        Book your table today and embark on a culinary journey through the heart of India
+      </p>
+      <div class="cta-banner-buttons reveal reveal-delay-3">
+        <a href="reservation.html" class="btn btn-primary">
+          Reserve a Table
+          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <h3 class="footer-logo">The<span>Tasty</span>Food</h3>
+          <p>A premium Indian dining destination where every dish tells a story of tradition, passion, and the finest flavors from across the subcontinent.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <div class="footer-hours">
+            <p>Monday – Friday <span>11:00 – 23:00</span></p>
+            <p>Saturday <span>10:00 – 00:00</span></p>
+            <p>Sunday <span>10:00 – 22:00</span></p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>42, MG Road, Connaught Place,<br>New Delhi, 110001</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>hello@thetastyfood.in</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TheTastyFood. All rights reserved.</p>
+        <p>Crafted with <span style="color: var(--accent-orange)">♥</span> for food lovers</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
